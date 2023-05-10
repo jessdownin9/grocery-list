@@ -1,0 +1,12 @@
+.lists-page {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4em;
+}
+
+.lists-page .list-tag {
+    background-color: #1A3848;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}

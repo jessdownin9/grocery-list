@@ -1,0 +1,19 @@
+.list-page {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4em;
+}
+
+.list-page .item-tag {
+    display: flex;
+    align-items: center;
+    background-color: #1A3848;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.list-page h3 {
+    margin-left: 0.5rem;
+    color: #617986;
+}

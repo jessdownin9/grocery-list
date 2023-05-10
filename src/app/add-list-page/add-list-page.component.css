@@ -1,0 +1,19 @@
+.add-list-page {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4em;
+}
+
+.add-list-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-list-page form * {
+    margin: 0.5rem;
+}
+
+.add-list-page button {
+    width: fit-content;
+    align-self: flex-end;
+}

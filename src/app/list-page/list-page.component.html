@@ -1,0 +1,15 @@
+<div class="list-page">
+    <div class="header">
+        <div class="header-button-container" (click)="goToLists()">
+            <img class="back" alt="back arrow" src="../../assets/images/back.png" />
+        </div>
+        <h1>{{lists[listId].name}}</h1>
+        <div class="header-button-container" (click)="goToAddItemPage()">
+            <img class="plus" alt="addition sign" src="../../assets/images/plus.png" />
+        </div>
+    </div>
+    <div class="item-tag" *ngFor="let item of lists[listId].items;">
+        <h2>{{item.name}}</h2>
+        <h3 *ngIf="item.quantity > 1">({{item.quantity}})</h3>
+    </div>
+</div>

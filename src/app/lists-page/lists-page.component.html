@@ -1,0 +1,14 @@
+<div class="lists-page">
+    <div class="header">
+        <div class="header-button-container hide">
+            <img class="back" alt="back arrow" src="../../assets/images/back.png" />
+        </div>
+        <h1>Lists</h1>
+        <div class="header-button-container" (click)="goToAddListPage()">
+            <img class="plus" alt="addition sign" src="../../assets/images/plus.png" />
+        </div>
+    </div>
+    <div class="list-tag" *ngFor="let list of lists;" (click)="onSelectList(list)">
+        <h2>{{list.name}}</h2>
+    </div>
+</div>
