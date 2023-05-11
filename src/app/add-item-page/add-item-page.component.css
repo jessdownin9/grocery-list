@@ -3,3 +3,17 @@
     flex-direction: column;
     padding: 0 4em;
 }
+
+.add-item-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item-page form * {
+    margin: 0.5rem;
+}
+
+.add-item-page button {
+    width: fit-content;
+    align-self: flex-end;
+}

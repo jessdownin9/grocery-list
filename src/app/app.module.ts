@@ -5,6 +5,8 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListsService } from './lists.service';
 import { FormsModule } from '@angular/forms';
+// import { DragDropModule } from '@angular/cdk/drag-drop';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    // DragDropModule
   ],
   providers: [ListsService],
   bootstrap: [AppComponent]

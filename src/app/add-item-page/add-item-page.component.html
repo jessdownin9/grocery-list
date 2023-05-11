@@ -9,8 +9,12 @@
         </div>
     </div>
     <form (ngSubmit)="addNewItem()">
-        <label for="newList">Name:</label>
+        <label for="newItemName">Name:</label>
         <input type="text" [(ngModel)]="newItemName" id="newItemName" name="newItemName" placeholder="New item" required >
+        <label for="newItemQuantity">Quantity:</label>
+        <input type="number" [(ngModel)]="newItemQuantity" id="newItemQuantity" name="newItemQuantity" placeholder="1" >
+        <label for="newItemNote">Note:</label>
+        <textarea [(ngModel)]="newItemNote" id="newItemNote" name="newItemNote" placeholder="Example: Get the name brand"></textarea>
         <button type="submit" class="green-button">Add Item</button>
     </form>
 </div>

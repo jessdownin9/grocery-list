@@ -22,7 +22,8 @@ export class AddListPageComponent {
       const newList:IList = {
         "id": this._listsService.lists.length,
         "name": this.newListName,
-        "items": []
+        "items": [],
+        "item_history": []
       };
       this._listsService.lists.push(newList);
       this.newListName = '';

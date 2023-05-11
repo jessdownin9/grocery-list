@@ -6,14 +6,29 @@
 
 .list-page .item-tag {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-color: #1A3848;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 1rem;
 }
 
+.list-page .item-tag .top-line {
+    display: flex;
+    align-items: center;
+}
+
+.list-page h2 {
+    margin: 0;
+}
+
 .list-page h3 {
+    margin: 0;
     margin-left: 0.5rem;
     color: #617986;
+}
+
+.list-page h4 {
+    color: #617986;
+    margin: 0;
 }

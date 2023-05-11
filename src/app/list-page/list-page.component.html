@@ -8,8 +8,13 @@
             <img class="plus" alt="addition sign" src="../../assets/images/plus.png" />
         </div>
     </div>
-    <div class="item-tag" *ngFor="let item of lists[listId].items;">
-        <h2>{{item.name}}</h2>
-        <h3 *ngIf="item.quantity > 1">({{item.quantity}})</h3>
+    <div class="items-container">
+        <div class="item-tag" *ngFor="let item of lists[listId].items;">
+            <div class="top-line">
+                <h2>{{item.name}}</h2>
+                <h3 *ngIf="item.quantity > 1">({{item.quantity}})</h3>
+            </div>
+            <h4>{{item.note}}</h4>
+        </div>
     </div>
 </div>
