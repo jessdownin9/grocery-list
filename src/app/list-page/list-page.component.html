@@ -4,17 +4,35 @@
             <img class="back" alt="back arrow" src="../../assets/images/back.png" />
         </div>
         <h1>{{lists[listId].name}}</h1>
-        <div class="header-button-container" (click)="goToAddItemPage()">
+        <div class="header-button-container hide" (click)="goToAddItemPage()">
             <img class="plus" alt="addition sign" src="../../assets/images/plus.png" />
         </div>
     </div>
-    <div class="items-container">
-        <div class="item-tag" *ngFor="let item of lists[listId].items;">
+    <div class="add-item-container">
+        <form (ngSubmit)="addNewItem()">
+            <input type="text" [(ngModel)]="newItemName" name="newItemName" id="newItemName" placeholder="New Item" />
+            <button type="submit">+</button>
+        </form>
+    </div>
+    <div cdkDropList (cdkDropListDropped)="drop($event)" class="items-container">
+        <div cdkDrag class="item-tag" *ngFor="let item of lists[listId].items; let i = index" (click)="crossOut($event, item)">
             <div class="top-line">
-                <h2>{{item.name}}</h2>
-                <h3 *ngIf="item.quantity > 1">({{item.quantity}})</h3>
+                <div class="name-container">
+                    <h2 *ngIf="editedNameIndex !== i" (click)="editItemName(i)" [ngStyle]="item.isCrossedOut ? crossedOutStyle : defaultStyle">{{item.name}}</h2>
+                    <input *ngIf="editedNameIndex === i" type="text" [(ngModel)]="item.name" (blur)="endNameEdit()" (keydown.escape)="endNameEdit()" (keydown.enter)="endNameEdit()" />
+                </div>
+                <div class="quantity-container" (click)="stopPropagation($event)">
+                    <div class="quantity-button-container sub" (click)="decrementItemQuantity(item)">
+                        <img alt="subtraction sign" src="../../assets/images/minus-sign.png" />
+                    </div>
+                    <h3>{{item.quantity}}</h3>
+                    <div class="quantity-button-container add" (click)="incrementItemQuantity(item)">
+                        <img alt="addition sign" src="../../assets/images/plus.png" />
+                    </div>
+                </div>
             </div>
-            <h4>{{item.note}}</h4>
+            <h4 *ngIf="editedNoteIndex !== i" (click)="editItemNote(i)">{{item.note}}</h4>
+            <input *ngIf="editedNoteIndex === i" type="text" [(ngModel)]="newItemNote" (blur)="cancelNoteEdit()" (keydown.escape)="cancelNoteEdit()" (keydown.enter)="endNoteEdit(item)" placeholder="Add note" />
         </div>
     </div>
 </div>

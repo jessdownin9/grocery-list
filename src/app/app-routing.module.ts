@@ -5,7 +5,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ListsPageComponent } from './lists-page/lists-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
 import { AddListPageComponent } from './add-list-page/add-list-page.component';
-import { AddItemPageComponent } from './add-item-page/add-item-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -13,7 +12,6 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'lists', component: ListsPageComponent },
   { path: 'lists/:id', component: ListPageComponent },
-  { path: 'lists/:id/addItem', component: AddItemPageComponent },
   { path: 'addList', component: AddListPageComponent },
 ];
 
@@ -27,6 +25,5 @@ export const routingComponents = [
   LoginPageComponent,
   ListsPageComponent,
   ListPageComponent,
-  AddListPageComponent,
-  AddItemPageComponent
+  AddListPageComponent
 ];

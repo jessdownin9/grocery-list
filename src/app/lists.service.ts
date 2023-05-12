@@ -14,13 +14,15 @@ export class ListsService {
           "id": 0,
           "name": "Apple",
           "quantity": 1,
-          "note": ""
+          "note": "Add Note",
+          "isCrossedOut": false
         },
         {
           "id": 1,
           "name": "Potato",
           "quantity": 2,
-          "note": ""
+          "note": "Add Note",
+          "isCrossedOut": false
         }
       ],
       "item_history": [
@@ -28,13 +30,15 @@ export class ListsService {
           "id": 0,
           "name": "Apple",
           "quantity": 1,
-          "note": ""
+          "note": "Add Note",
+          "isCrossedOut": false
         },
         {
           "id": 1,
           "name": "Potato",
           "quantity": 2,
-          "note": ""
+          "note": "Add Note",
+          "isCrossedOut": false
         }
       ]
     },
@@ -46,7 +50,8 @@ export class ListsService {
           "id": 0,
           "name": "Maple Syrup",
           "quantity": 1,
-          "note": ""
+          "note": "Add Note",
+          "isCrossedOut": false
         }
       ],
       "item_history": [
@@ -54,7 +59,8 @@ export class ListsService {
           "id": 0,
           "name": "Maple Syrup",
           "quantity": 1,
-          "note": ""
+          "note": "Add Note",
+          "isCrossedOut": false
         }
       ]
     }
